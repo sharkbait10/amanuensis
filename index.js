@@ -16,6 +16,7 @@ async function app() {
     console.log(currencies);
     targetProjectVersion = await target.currencies.createCurrenciesAsync(targetProjectVersion, currencies);
     targetProjectVersion = await target.languages.createLanguagesAsync(targetProjectVersion, languages);
+    await target.countries.createCountriesAsync(targetProjectVersion, countries);
   } catch (e) {
     console.log(e.message);
   }

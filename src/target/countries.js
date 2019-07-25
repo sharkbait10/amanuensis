@@ -7,13 +7,13 @@ const service = init.createRequestBuilderTarget({
   projectKey
 }).project
 
-async function createLanguagesAsync(version, languages) {
+async function createCountriesAsync(version, countries) {
 
   const body = {
       version: version,
       actions: [{
-          action: 'changeLanguages',
-          languages: languages
+          action: 'changeCountries',
+          countries: countries
       }]
   }
   // console.log(JSON.stringify(body, undefined, 2));
@@ -29,11 +29,11 @@ async function createLanguagesAsync(version, languages) {
 
   try {
     let response = await init.clientTarget.execute(createPostRequest);
-    console.log("Languages imported successfully");
+    console.log("Countries imported successfully");
     return response.body.version;
   } catch (e) {
     console.log(e.message);
   }
 }
 
-exports.createLanguagesAsync = createLanguagesAsync;
+exports.createCountriesAsync = createCountriesAsync;
