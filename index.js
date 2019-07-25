@@ -11,6 +11,7 @@ async function app() {
     console.log('--- Target ---');
     let targetProject = await target.projectInfo.getProjectAsync();
     console.log(targetProject);
+    await source.projectInfo.getSourceCurrencies();
   } catch (e) {
     console.log(e.message);
   }
