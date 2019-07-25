@@ -7,13 +7,13 @@ const service = init.createRequestBuilderTarget({
   projectKey
 }).project
 
-async function createCurrenciesAsync(version, currencies) {
+async function createLanguagesAsync(version, languages) {
 
   const body = {
       version: version,
       actions: [{
-          action: 'changeCurrencies',
-          currencies: currencies
+          action: 'changeLanguages',
+          languages: languages
       }]
   }
   // console.log(JSON.stringify(body, undefined, 2));
@@ -29,11 +29,11 @@ async function createCurrenciesAsync(version, currencies) {
 
   try {
     let response = await init.clientTarget.execute(createPostRequest);
-    console.log("Currencies imported successfully");
+    console.log("Languages imported successfully");
     return response.body.version;
   } catch (e) {
     console.log(e.message);
   }
 }
 
-exports.createCurrenciesAsync = createCurrenciesAsync;
+exports.createLanguagesAsync = createLanguagesAsync;

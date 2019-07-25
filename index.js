@@ -12,8 +12,10 @@ async function app() {
     let targetProject = await target.projectInfo.getProjectAsync();
     console.log(targetProject);
     let targetProjectVersion = targetProject.body.version;
-    await source.projectInfo.getSourceCurrencies();
-    await target.currencies.createCurrenciesAsync(targetProjectVersion);
+    let {currencies, languages, countries} = await source.projectInfo.getSourceProjectSettings();
+    console.log(currencies);
+    targetProjectVersion = await target.currencies.createCurrenciesAsync(targetProjectVersion, currencies);
+    targetProjectVersion = await target.languages.createLanguagesAsync(targetProjectVersion, languages);
   } catch (e) {
     console.log(e.message);
   }

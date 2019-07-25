@@ -29,17 +29,29 @@ async function getProjectAsync() {
 
 exports.getProjectAsync = getProjectAsync;
 
-async function getSourceCurrencies() {
+async function getSourceProjectSettings() {
   try {
     let project = await getProjectAsync();
     let currencies = project.body.currencies;
+    let languages = project.body.languages;
+    let countries = project.body.countries;
 
-    await fs.writeFile('./exports/currencies.json', JSON.stringify(currencies), 'utf8', function(err) {
-      if (err) throw err;
-    });
+    return {currencies, languages, countries};
+
+    // await fs.writeFile('./exports/currencies.json', JSON.stringify(currencies), 'utf8', function(err) {
+    //   if (err) throw err;
+    // });
+    //
+    // await fs.writeFile('./exports/languages.json', JSON.stringify(languages), 'utf8', function(err) {
+    //   if (err) throw err;
+    // });
+    //
+    // await fs.writeFile('./exports/countries.json', JSON.stringify(countries), 'utf8', function(err) {
+    //   if (err) throw err;
+    // });
   } catch (e) {
     console.log(e.message);
   }
 }
 
-exports.getSourceCurrencies = getSourceCurrencies;
+exports.getSourceProjectSettings = getSourceProjectSettings;
