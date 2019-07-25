@@ -1,0 +1,20 @@
+{
+  "name": "amanuensis",
+  "version": "1.0.0",
+  "description": "App to create a copy of a CTP project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "irene.bonta@accenture.com",
+  "license": "ISC",
+  "dependencies": {
+    "@commercetools/api-request-builder": "^5.0.0",
+    "@commercetools/sdk-client": "^2.0.0",
+    "@commercetools/sdk-middleware-auth": "^5.0.0",
+    "@commercetools/sdk-middleware-http": "^5.0.0",
+    "@commercetools/sdk-middleware-queue": "^2.0.0",
+    "require-all": "^3.0.0",
+    "yargs": "^13.2.2"
+  }
+}
