@@ -1,8 +1,6 @@
 var init = require('./init')
 var libs = require('../../credentials/source/source')
 
-var fs = require('fs');
-
 const projectKey = libs.projectKey;
 
 const service = init.createRequestBuilderSource({
@@ -37,18 +35,6 @@ async function getSourceProjectSettings() {
     let countries = project.body.countries;
 
     return {currencies, languages, countries};
-
-    // await fs.writeFile('./exports/currencies.json', JSON.stringify(currencies), 'utf8', function(err) {
-    //   if (err) throw err;
-    // });
-    //
-    // await fs.writeFile('./exports/languages.json', JSON.stringify(languages), 'utf8', function(err) {
-    //   if (err) throw err;
-    // });
-    //
-    // await fs.writeFile('./exports/countries.json', JSON.stringify(countries), 'utf8', function(err) {
-    //   if (err) throw err;
-    // });
   } catch (e) {
     console.log(e.message);
   }
