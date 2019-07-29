@@ -23,8 +23,10 @@ async function app() {
     // await target.taxes.createTaxCategories(taxCategories);
     // let shippingMethods = await source.shipping.getShippingMethods();
     // await target.shipping.createShippingMethods(shippingMethods);
-    let channels = await source.channels.getSourceChannels();
-    await target.channels.createChannels(channels);
+    // let channels = await source.channels.getSourceChannels();
+    // await target.channels.createChannels(channels);
+    let productTypes = await source.productTypes.getProductTypes();
+    await target.productTypes.createProductTypes(productTypes);
   } catch (e) {
     console.log(e.message);
   }
