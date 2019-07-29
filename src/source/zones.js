@@ -18,7 +18,7 @@ const createGetRequest = {
 
 async function getZones() {
   try {
-    let getZonesResponse = await await init.clientSource.execute(createGetRequest);
+    let getZonesResponse = await init.clientSource.execute(createGetRequest);
     let zones = getZonesResponse.body.results;
     let filteredZones = {};
     let key = 'zones';
@@ -38,3 +38,23 @@ async function getZones() {
 }
 
 exports.getZones = getZones;
+
+async function getZoneById(id) {
+  const serviceById = init.createRequestBuilderSource({
+    projectKey
+  }).zones.byId(id)
+
+  const createGetRequestById = {
+    uri: serviceById.build(),
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  }
+
+  let response = await init.clientSource.execute(createGetRequestById);
+  return response.body.name;
+}
+
+exports.getZoneById = getZoneById;

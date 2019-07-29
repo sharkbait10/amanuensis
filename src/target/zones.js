@@ -45,3 +45,28 @@ async function createZone(zone) {
     console.log(e.message);
   }
 }
+
+async function getZoneIdByName(name) {
+  const service = init.createRequestBuilderTarget({
+    projectKey
+  }).zones
+
+  const createGetRequest = {
+    uri: service.build(),
+    method: 'GET',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+  }
+
+  let response = await init.clientTarget.execute(createGetRequest);
+  let zones = response.body.results;
+  for(let i = 0; i<zones.length; i++) {
+    if(zones[i].name === name) {
+      return zones[i].id;
+    }
+  }
+}
+
+exports.getZoneIdByName = getZoneIdByName;

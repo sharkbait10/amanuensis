@@ -18,7 +18,7 @@ const createGetRequest = {
 
 async function getTaxCategories() {
   try {
-    let getTaxCategoriesResponse = await await init.clientSource.execute(createGetRequest);
+    let getTaxCategoriesResponse = await init.clientSource.execute(createGetRequest);
     let taxCategories = getTaxCategoriesResponse.body.results;
     let filteredTaxCategories = {};
     let key = 'taxCategories';
@@ -39,3 +39,29 @@ async function getTaxCategories() {
 }
 
 exports.getTaxCategories = getTaxCategories;
+
+
+
+async function getTaxCategoryById(id) {
+  try {
+    const serviceById = init.createRequestBuilderSource({
+      projectKey
+    }).taxCategories.byId(id)
+
+    const createGetRequestById = {
+      uri: serviceById.build(),
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }
+
+    let response = await init.clientSource.execute(createGetRequestById);
+    return response.body.name;
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
+exports.getTaxCategoryById = getTaxCategoryById;

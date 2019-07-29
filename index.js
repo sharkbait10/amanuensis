@@ -19,8 +19,10 @@ async function app() {
     // await target.countries.createCountriesAsync(targetProjectVersion, countries);
     // let zones = await source.zones.getZones();
     // await target.zones.createZones(zones);
-    let taxCategories = await source.taxes.getTaxCategories();
-    await target.taxes.createTaxCategories(taxCategories);
+    // let taxCategories = await source.taxes.getTaxCategories();
+    // await target.taxes.createTaxCategories(taxCategories);
+    // let shippingMethods = await source.shipping.getShippingMethods();
+    // await target.shipping.createShippingMethods(shippingMethods);
   } catch (e) {
     console.log(e.message);
   }

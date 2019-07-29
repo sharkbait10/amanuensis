@@ -45,3 +45,29 @@ async function createTaxCategory(tax) {
     console.log(e.message);
   }
 }
+
+async function getTaxCategoryByName(name) {
+  try {
+    const createGetRequest = {
+      uri: service.build(),
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    }
+
+    let response = await init.clientTarget.execute(createGetRequest);
+    let taxCategories = response.body.results;
+    for(let i = 0; i<taxCategories.length; i++) {
+      if(taxCategories[i].name === name) {
+        return taxCategories[i].id;
+      }
+    }
+  } catch (e) {
+    console.log(e.message);
+  }
+
+}
+
+exports.getTaxCategoryByName = getTaxCategoryByName;
