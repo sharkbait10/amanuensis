@@ -68,9 +68,7 @@ async function getCategoryById(id) {
     let response = await init.clientSource.execute(createGetRequestById);
     return response.body.key;
   } catch (e) {
-
-  } finally {
-
+    console.log(e.message);
   }
 }
 

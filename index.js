@@ -27,8 +27,10 @@ async function app() {
     // await target.channels.createChannels(channels);
     // let productTypes = await source.productTypes.getProductTypes();
     // await target.productTypes.createProductTypes(productTypes);
-    let categories = await source.categories.getAllCategories();
-    await target.categories.createCategories(categories);
+    // let categories = await source.categories.getAllCategories();
+    // await target.categories.createCategories(categories);
+    let productDiscounts = await source.productDiscounts.getAllProductDiscounts();
+    await target.productDiscounts.createDiscounts(productDiscounts);
   } catch (e) {
     console.log(e.message);
   }

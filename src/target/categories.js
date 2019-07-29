@@ -88,3 +88,5 @@ async function getCategoryIdByKey(key) {
     console.log(e.message);
   }
 }
+
+exports.getCategoryIdByKey = getCategoryIdByKey;
