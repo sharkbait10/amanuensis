@@ -9,16 +9,16 @@ const {
 } = require('@commercetools/sdk-middleware-http')
 const fetch = require('node-fetch')
 
-const projectKey = 'troia'
+const projectKey = 'clonedue'
 
 const authMiddleware = createAuthMiddlewareForClientCredentialsFlow({
   host: 'https://auth.sphere.io',
   projectKey,
   credentials: {
-    clientId: 'b8_cAW_-BXoJqAS3beIdagwB',
-    clientSecret: '5bKrQxFi5UXKjNbnvVbscDcaIQbUeV7m',
+    clientId: 'MMY1110gt5hLGO5ic-URkBjm',
+    clientSecret: 'WcOIAHjk_giZWMDPuxru8GTzkjob4wbF',
   },
-  scopes: ['manage_project:troia view_api_clients:troia manage_api_clients:troia'],
+  scopes: ['manage_project:clonedue view_api_clients:clonedue manage_api_clients:clonedue'],
   fetch,
 })
 const httpMiddleware = createHttpMiddleware({

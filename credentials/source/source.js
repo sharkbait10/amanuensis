@@ -9,16 +9,16 @@ const {
 } = require('@commercetools/sdk-middleware-http')
 const fetch = require('node-fetch')
 
-const projectKey = 'porca'
+const projectKey = 'ie-visionexpress-testing'
 
 const authMiddleware = createAuthMiddlewareForClientCredentialsFlow({
   host: 'https://auth.sphere.io',
   projectKey,
   credentials: {
-    clientId: 'SHHqQgdSavBF43W5iuPjSN7I',
-    clientSecret: 'c8BnTBmlhsH5m6kaTC_0Wl-K0b6CkAYa',
+    clientId: 'pa1pHO8CF15EcoP9KKevzju9',
+    clientSecret: 'kua5u3dcS4YI2huKEqxyf_ITagIa9w9M',
   },
-  scopes: ['manage_project:porca view_api_clients:porca manage_api_clients:porca'],
+  scopes: ['manage_project:ie-visionexpress-testing view_api_clients:ie-visionexpress-testing manage_api_clients:ie-visionexpress-testing'],
   fetch,
 })
 const httpMiddleware = createHttpMiddleware({

@@ -17,8 +17,6 @@ async function createProductTypes(types) {
     console.log("Product types imported successfully");
   } catch (e) {
     console.log(e.message);
-  } finally {
-
   }
 
 }

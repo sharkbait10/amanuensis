@@ -9,7 +9,6 @@ const service = init.createRequestBuilderTarget({
 
 async function createShippingMethods(shippingMethods) {
   try {
-    console.log(JSON.stringify(shippingMethods, undefined, 2));
     for (let shippingMethod of shippingMethods.shippingMethods) {
       await createShippingMethod(shippingMethod);
     }
