@@ -29,8 +29,12 @@ async function app() {
     // await target.productTypes.createProductTypes(productTypes);
     // let categories = await source.categories.getAllCategories();
     // await target.categories.createCategories(categories);
-    let productDiscounts = await source.productDiscounts.getAllProductDiscounts();
-    await target.productDiscounts.createDiscounts(productDiscounts);
+    // let productDiscounts = await source.productDiscounts.getAllProductDiscounts();
+    // await target.productDiscounts.createDiscounts(productDiscounts);
+    // let cartDiscounts = await source.cartDiscounts.getAllCartDiscounts();
+    // await target.cartDiscounts.createDiscounts(cartDiscounts);
+    let discountCodes = await source.discountCodes.getAllDiscountCodes();
+    await target.discountCodes.createDiscountCodes(discountCodes);
   } catch (e) {
     console.log(e.message);
   }
