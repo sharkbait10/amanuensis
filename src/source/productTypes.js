@@ -28,7 +28,8 @@ async function getProductTypes() {
         name: element.name,
         description: element.description,
         classifier: element.classifier,
-        attributes: element.attributes
+        attributes: element.attributes,
+        key: element.key
       };
       filteredTypes[key].push(type);
     });
