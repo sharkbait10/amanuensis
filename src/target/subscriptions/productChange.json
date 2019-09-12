@@ -1,0 +1,16 @@
+{
+    "destination": {
+        "type": "AzureServiceBus",
+        "connectionString": "Endpoint=sb://io-whitelabel-testing.servicebus.windows.net/;SharedAccessKeyName=accessKeyName;SharedAccessKey=xxxxxxxx=;EntityPath=ct-product-change"
+    },
+    "messages": [
+        {
+            "resourceTypeId": "product",
+            "types": [
+                "ProductPublished",
+                "ProductUnpublished"
+            ]
+        }
+    ],
+    "key": "ct-product-change"
+}

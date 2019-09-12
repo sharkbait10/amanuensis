@@ -1,0 +1,85 @@
+{
+    "key": "order-grandvision",
+    "name": {
+        "en": "additional custom fields for a grandvision order"
+    },
+    "resourceTypeIds": ["order"],
+    "fieldDefinitions": [{
+            "type": {
+                "name": "String"
+            },
+            "name": "customerVatId",
+            "label": {
+                "en": "Customer VAT id"
+            },
+            "required": false,
+            "inputHint": "SingleLine"
+        },
+        {
+            "type": {
+                "name": "String"
+            },
+            "name": "customerCode",
+            "label": {
+                "en": "Customer code"
+            },
+            "required": false,
+            "inputHint": "SingleLine"
+        },
+        {
+            "type": {
+                "name": "String"
+            },
+            "name": "recipientCode",
+            "label": {
+                "en": "Recepient code"
+            },
+            "required": false,
+            "inputHint": "SingleLine"
+        },
+        {
+            "type": {
+                "name": "String"
+            },
+            "name": "secondaryEmail",
+            "label": {
+                "en": "Secondary email"
+            },
+            "required": false,
+            "inputHint": "SingleLine"
+        },
+        {
+            "name": "marketingEmailsOptIn",
+            "label": {
+                "en": "Marketing emails opt-in"
+            },
+            "required": false,
+            "type": {
+                "name": "Boolean"
+            },
+            "inputHint": "SingleLine"
+        },
+        {
+            "name": "customerDateOfBirth",
+            "label": {
+                "en": "Customer date of birth"
+            },
+            "required": false,
+            "type": {
+                "name": "Date"
+            },
+            "inputHint": "SingleLine"
+        },
+        {
+            "name": "prescriptionSignatures",
+            "label": {
+                "en": "Prescription signatures"
+            },
+            "required": false,
+            "type": {
+                "name": "String"
+            },
+            "inputHint": "SingleLine"
+        }
+    ]
+}

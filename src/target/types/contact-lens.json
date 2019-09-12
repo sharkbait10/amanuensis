@@ -1,0 +1,81 @@
+{
+  "key": "contact-lens",
+  "name": {
+    "en": "contact lens"
+  },
+  "description": {
+    "en": "custom fields for contact lenses"
+  },
+  "resourceTypeIds": ["line-item"],
+  "fieldDefinitions": [
+    {
+      "name": "eyeSide",
+      "label": {
+        "en": "Eye side"
+      },
+      "required": true,
+      "type": {
+        "name": "Enum",
+        "values": [
+          {
+            "key": "left",
+            "label": "left"
+          },
+          {
+            "key": "right",
+            "label": "right"
+          },
+          {
+            "key": "both",
+            "label": "both"
+          }
+        ]
+      },
+      "inputHint": "SingleLine"
+    },
+    {
+      "type": {
+        "name": "String"
+      },
+      "name": "prescriptionExamDate",
+      "label": {
+        "en": "Prescription exam date"
+      },
+      "required": false,
+      "inputHint": "SingleLine"
+    },
+    {
+      "type": {
+        "name": "String"
+      },
+      "name": "prescriptionExpiryDate",
+      "label": {
+        "en": "Prescription expiry date"
+      },
+      "required": false,
+      "inputHint": "SingleLine"
+    },
+    {
+      "type": {
+        "name": "String"
+      },
+      "name": "externalOptician",
+      "label": {
+        "en": "External optician"
+      },
+      "required": false,
+      "inputHint": "SingleLine"
+    },
+    {
+      "type": {
+        "name": "String"
+      },
+      "name": "internalOptician",
+      "label": {
+        "en": "Internal optician"
+      },
+      "required": false,
+      "inputHint": "SingleLine"
+    }
+  ]
+}

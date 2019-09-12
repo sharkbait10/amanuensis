@@ -1,0 +1,30 @@
+{
+    "key": "payments-grandvision",
+    "name": {
+        "en": "additional custom fields for a grandvision payment"
+    },
+    "resourceTypeIds": ["payment"],
+    "fieldDefinitions": [{
+            "type": {
+                "name": "String"
+            },
+            "name": "paymentMethodExternalId",
+            "label": {
+                "en": "Payment method external ID"
+            },
+            "required": false,
+            "inputHint": "SingleLine"
+        },
+        {
+            "type": {
+                "name": "String"
+            },
+            "name": "paymentMethodDetails",
+            "label": {
+                "en": "Set of payment method details in stringified JSON format"
+            },
+            "required": false,
+            "inputHint": "MultiLine"
+        }
+    ]
+}

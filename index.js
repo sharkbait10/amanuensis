@@ -1,5 +1,8 @@
 var source = require('require-all')(__dirname + '/src/source');
 var target = require('require-all')(__dirname + '/src/target');
+var customObjects = require('require-all')(__dirname + '/src/target/customObjects');
+var types = require('require-all')(__dirname + '/src/target/types');
+var subscriptions = require('require-all')(__dirname + '/src/target/subscriptions');
 
 app();
 
@@ -35,6 +38,9 @@ async function app() {
     await target.cartDiscounts.createDiscounts(cartDiscounts);
     let discountCodes = await source.discountCodes.getAllDiscountCodes();
     await target.discountCodes.createDiscountCodes(discountCodes);
+    await customObjects.customObjects.createCustomObjects();
+    await types.types.createTypes();
+    await subscriptions.subscriptions.createSubscriptions();
   } catch (e) {
     console.log(e.message);
   }
