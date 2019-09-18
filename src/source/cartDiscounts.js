@@ -38,7 +38,8 @@ async function getAllCartDiscounts() {
         attributeTypes: element.attributeTypes,
         cartFieldTypes: element.cartFieldTypes,
         lineItemFieldTypes: element.lineItemFieldTypes,
-        customLineItemFieldTypes: element.customLineItemFieldTypes
+        customLineItemFieldTypes: element.customLineItemFieldTypes,
+        createdAt: element.createdAt
       };
       filteredDiscounts[key].push(discount);
     });

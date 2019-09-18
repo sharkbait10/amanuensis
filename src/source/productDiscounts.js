@@ -32,7 +32,8 @@ async function getAllProductDiscounts() {
         isActive: element.isActive,
         sortOrder: element.sortOrder,
         references: element.references,
-        attributeTypes: element.attributeTypes
+        attributeTypes: element.attributeTypes,
+        createdAt: element.createdAt
       };
       filteredDiscounts[key].push(discount);
     });
