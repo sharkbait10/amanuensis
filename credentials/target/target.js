@@ -3,16 +3,16 @@ const { createClient } = require('@commercetools/sdk-client')
   const { createHttpMiddleware } = require('@commercetools/sdk-middleware-http')
   const fetch = require('node-fetch')
 
-  const projectKey = 'fava'
+  const projectKey = 'ie-visionexpress-acceptance'
 
   const authMiddleware = createAuthMiddlewareForClientCredentialsFlow({
     host: 'https://auth.sphere.io',
     projectKey,
     credentials: {
-      clientId: '6OO8jx1kNRjDyfaUM5LxZ9io',
-      clientSecret: 'ptvT8lnYqqYZAaM75Lg_sMIKIY-_ww_B',
+      clientId: '5euTl6v3wOuzKPylMeIqySGE',
+      clientSecret: 'Oimu4EvxATUaWNpAB9puaRD_q06uO-VV',
     },
-    scopes: ['manage_project:fava view_api_clients:fava manage_api_clients:fava'],
+    scopes: ['manage_project:ie-visionexpress-acceptance manage_api_clients:ie-visionexpress-acceptance view_api_clients:ie-visionexpress-acceptance'],
     fetch,
   })
   const httpMiddleware = createHttpMiddleware({

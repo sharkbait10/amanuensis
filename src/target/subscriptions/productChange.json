@@ -1,7 +1,7 @@
 {
     "destination": {
         "type": "AzureServiceBus",
-        "connectionString": "Endpoint=sb://io-whitelabel-testing.servicebus.windows.net/;SharedAccessKeyName=accessKeyName;SharedAccessKey=xxxxxxxx=;EntityPath=ct-product-change"
+        "connectionString": "Endpoint=sb://gb-visionexpress-acceptance.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=wb+Ln2jZxOzFFDTqSlKFRJIgXJduxzq1avcbLwAC2R8=;EntityPath=ct-product-change"
     },
     "messages": [
         {

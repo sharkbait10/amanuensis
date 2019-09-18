@@ -35,7 +35,9 @@ async function getAllDiscountCodes() {
         cartFieldTypes: element.cartFieldTypes,
         lineItemFieldTypes: element.lineItemFieldTypes,
         customLineItemFieldTypes: element.customLineItemFieldTypes,
-        groups: element.groups
+        groups: element.groups,
+        maxApplications: element.maxApplications,
+        maxApplicationsPerCustomer: element.maxApplicationsPerCustomer
       };
       filteredDiscounts[key].push(discount);
     });

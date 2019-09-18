@@ -10,15 +10,6 @@ const service = init.createRequestBuilderTarget({
   projectKey
 }).discountCodes
 
-const createGetRequest = {
-  uri: service.build(),
-  method: 'GET',
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  },
-}
-
 async function createDiscountCodes(codes) {
 
   try {
