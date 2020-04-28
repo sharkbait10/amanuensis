@@ -12,7 +12,7 @@ const { createClient } = require('@commercetools/sdk-client')
       clientId: 'asd',
       clientSecret: 'asdasd',
     },
-    scopes: ['manage_project:ie-visionexpress-testing manage_api_clients:ie-visionexpress-testing view_api_clients:ie-visionexpress-testing'],
+    scopes: ['manage_project:source-project manage_api_clients:source-project view_api_clients:source-project'],
     fetch,
   })
   const httpMiddleware = createHttpMiddleware({
